@@ -106,6 +106,9 @@ const ServicesGallery = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services[category].map(service => (
                   <div key={service.id} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                    <div className="relative aspect-video bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                      <span className="text-sm font-medium text-gray-400">Image will be added soon</span>
+                    </div>
                     <div className="p-6 flex-1 flex flex-col justify-between">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                       <div className="mt-4 inline-flex items-center text-brand-600 font-semibold bg-brand-50 px-3 py-1.5 rounded-lg w-fit">

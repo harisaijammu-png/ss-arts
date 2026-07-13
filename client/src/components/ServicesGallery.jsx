@@ -85,7 +85,7 @@ const ServicesGallery = () => {
     return (
       <div className="py-32 text-center">
         <div className="animate-pulse flex flex-col items-center justify-center space-y-4">
-          <div className="text-2xl font-black text-black tracking-widest uppercase">Loading Products...</div>
+          <div className="text-2xl font-black text-black tracking-widest uppercase">Loading Services...</div>
         </div>
       </div>
     );

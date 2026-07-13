@@ -16,7 +16,7 @@ INSERT INTO services (category, title, price_description) VALUES
 ('Stone Engraving & Photos', 'Full Photo', '₹3,000'),
 
 -- Digital Printing
-('Digital Printing', 'One Sheet PVC (13x19)', '₹35 with cutting'),
+('Digital Printing', 'PVC (13x19)', '₹35 with cutting'),
 ('Digital Printing', 'Non-PVC (13x19)', '₹25 with cutting'),
 ('Digital Printing', 'Board (13x19)', '₹20 with cutting'),
 ('Digital Printing', 'Art Paper (13x19)', '₹15 with cutting'),
@@ -30,7 +30,6 @@ INSERT INTO services (category, title, price_description) VALUES
 ('Laser Cutting', 'Foam', 'Price based on sqft and design'),
 ('Laser Cutting', 'PVC Sheet / Drum Sheet', 'Price based on sqft and design'),
 ('Laser Cutting', 'Acrylic', 'Price based on sqft and design'),
-('Laser Cutting', 'Stencils', 'Price based on sqft and design'),
 
 -- Stickering & Vinyl
 ('Stickering & Vinyl', 'Radium Sticker', '₹80/sq ft'),

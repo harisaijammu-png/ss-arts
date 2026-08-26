@@ -85,41 +85,41 @@ const ServicesGallery = () => {
     return (
       <div className="py-32 text-center">
         <div className="animate-pulse flex flex-col items-center justify-center space-y-4">
-          <div className="text-2xl font-black text-black tracking-widest uppercase">Loading Services...</div>
+          <div className="text-2xl font-black text-white tracking-widest uppercase">Loading Services...</div>
         </div>
       </div>
     );
   }
 
   return (
-    <section className="py-24 px-6 lg:px-8 bg-gray-50" id="services">
+    <section className="py-24 px-6 lg:px-8 bg-transparent" id="services">
       <div className="max-w-7xl mx-auto space-y-24">
         {CATEGORIES.map(category => (
           <div key={category} className="space-y-12">
             <div className="text-center">
-              <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl">{category}</h2>
-              <div className="mt-4 h-1 w-24 bg-brand-500 mx-auto rounded-full" />
+              <h2 className="text-3xl font-black tracking-tight text-white sm:text-5xl">{category}</h2>
+              <div className="mt-4 h-1 w-24 bg-brand-500 mx-auto rounded-full shadow-[0_0_10px_rgba(20,184,166,0.5)]" />
             </div>
             
             {services[category]?.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services[category].map(service => (
-                  <div key={service.id} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
-                    <div className="relative aspect-video bg-gray-50 flex items-center justify-center border-b border-gray-100 overflow-hidden">
+                  <div key={service.id} className="group bg-white/5 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-[0_10px_40px_rgba(20,184,166,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-white/10 flex flex-col">
+                    <div className="relative aspect-video bg-black/40 flex items-center justify-center border-b border-white/10 overflow-hidden">
                       {service.image_url ? (
                         <img 
                           src={service.image_url} 
                           alt={service.title} 
                           onClick={() => setSelectedImage(service.image_url)}
-                          className="w-full h-full object-contain cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain cursor-pointer group-hover:scale-105 transition-transform duration-700"
                         />
                       ) : (
-                        <span className="text-sm font-medium text-gray-400">Image will be added soon</span>
+                        <span className="text-sm font-medium text-white/40">Image will be added soon</span>
                       )}
                     </div>
                     <div className="p-6 flex-1 flex flex-col justify-between">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                      <div className="mt-4 inline-flex items-center text-brand-600 font-semibold bg-brand-50 px-3 py-1.5 rounded-lg w-fit">
+                      <h3 className="text-xl font-extrabold text-white mb-2">{service.title}</h3>
+                      <div className="mt-4 inline-flex items-center text-brand-300 font-semibold bg-brand-500/20 border border-brand-500/30 px-3 py-1.5 rounded-lg w-fit">
                         {service.price_description}
                       </div>
                     </div>
@@ -127,7 +127,7 @@ const ServicesGallery = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center text-gray-500 italic py-12 bg-white rounded-2xl border border-gray-100 border-dashed">
+              <div className="text-center text-slate-400 italic py-12 bg-white/5 rounded-2xl border border-white/10 border-dashed backdrop-blur-sm">
                 More items coming soon to this category.
               </div>
             )}

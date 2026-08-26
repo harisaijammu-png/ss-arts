@@ -7,7 +7,7 @@ import SEO from './components/SEO';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#0B1120] flex flex-col font-sans text-slate-300 selection:bg-brand-500/30">
       <SEO />
       
       {/* Navigation (Optional simple header if needed, but Hero serves as main entry) */}
@@ -29,7 +29,7 @@ function App() {
         <ContactLocation />
       </main>
 
-      <footer className="bg-gray-900 text-gray-400 py-12 text-center border-t border-gray-800">
+      <footer className="bg-[#0f172a] text-slate-400 py-12 text-center border-t border-white/5 relative z-10">
         <p>&copy; {new Date().getFullYear()} SS Arts Digital Printing. All rights reserved.</p>
         <p className="text-sm mt-2">Singarayakonda, Andhra Pradesh</p>
       </footer>
